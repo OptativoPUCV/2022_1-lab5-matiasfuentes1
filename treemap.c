@@ -103,7 +103,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 tree -> current = tree ->root;
 if(tree-> root == key){
 
-    return tree ->root;
+    return tree;
 }
 
 return NULL;
