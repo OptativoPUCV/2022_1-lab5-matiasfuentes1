@@ -103,9 +103,9 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
   if(tree == NULL){
       return NULL;
-  }else if (tree ->root < key){
+  }else if (tree -> current < key){
       return searchTreeMap(aux->right,key);
-  }else if(tree ->root > key){
+  }else if(tree -> current > key){
       return  searchTreeMap(aux -> left,key);
   }else{
      return NULL;
