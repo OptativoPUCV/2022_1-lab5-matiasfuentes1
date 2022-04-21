@@ -108,13 +108,13 @@ aux -> pair->key = tree ->root;
     /*while(key!=NULL){
         if(aux->pair->key > key){
             aux -> pair -> key = aux ->left;
-            aux -> pair -> value = aux ->left;
+            //aux -> pair -> value = aux ->left;
             if(aux -> pair -> key == key){
                 return aux->pair;
             }
         }else{
             aux -> pair -> key = aux ->right;
-            aux -> pair -> value = aux ->right;
+            //aux -> pair -> value = aux ->right;
             if(aux -> pair -> key == key){
                 return aux->pair;
             }
