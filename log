@@ -176,3 +176,14 @@ treemap.c:145:1: error: control reaches end of non-void function [-Werror=return
 cc1.exe: all warnings being treated as errors
 Compilation failed
 e258d74
+ju., 21 de abr. de 2022 17:24:05: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+test.c: In function 'searchTreeMap':
+treemap.c:103:5: error: 'aux' is used uninitialized in this function [-Werror=uninitialized]
+ aux -> pair->key = tree ->root;
+ ~~~~^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+c145336
