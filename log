@@ -233,3 +233,14 @@ treemap.c:103:31: error: 'root' undeclared (first use in this function)
 treemap.c:103:31: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 8e4fc20
+ju., 21 de abr. de 2022 17:36:57: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+test.c: In function 'searchTreeMap':
+treemap.c:103:5: error: 'aux' is used uninitialized in this function [-Werror=uninitialized]
+ aux -> pair->key = tree ->root;
+ ~~~~^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+b836c14
