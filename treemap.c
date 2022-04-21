@@ -115,7 +115,7 @@ if(tree == NULL){
      return NULL;
   }*/
 
-    return tree ->lower_than;
+    return NULL;
 }
 
 
