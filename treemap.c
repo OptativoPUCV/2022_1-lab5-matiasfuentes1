@@ -104,11 +104,26 @@ aux -> pair->key = tree ->root;
 
 //tree -> current = tree ->root;
 if(aux -> pair -> key == key){
-
     return aux -> pair;
+}else{
+    if(key == NULL){
+        return NULL;
+    }
+    while(key!=NULL){
+        if(aux->pair->key > key){
+            aux -> pair -> key = aux ->left;
+            if(aux -> pair -> key == key){
+                return aux->pair;
+            }
+        }else{
+            aux -> pair -> key = aux ->right;
+            if(aux -> pair -> key == key){
+                return aux->pair;
+            }
+        }
+    }
 }
-
-return NULL;
+//return NULL;
 
 
 
