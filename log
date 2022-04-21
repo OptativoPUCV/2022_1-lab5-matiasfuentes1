@@ -261,3 +261,14 @@ c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot ope
 collect2.exe: error: ld returned 1 exit status
 Compilation failed
 196d1de
+ju., 21 de abr. de 2022 17:46:39: 
+ treemap.c | 17 +++++++----------
+ 1 file changed, 7 insertions(+), 10 deletions(-)
+In file included from test.c:4:0:
+test.c: In function 'searchTreeMap':
+treemap.c:103:5: error: 'aux' is used uninitialized in this function [-Werror=uninitialized]
+ aux -> pair->key = tree ->root;
+ ~~~~^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2db8363
