@@ -100,12 +100,21 @@ void eraseTreeMap(TreeMap * tree, void* key){
 Pair * searchTreeMap(TreeMap * tree, void* key) {
   
  //TreeNode * aux = createTreeNode(key,NULL);
+tree -> current = tree ->root;
+if(tree-> root == key){
 
-if(tree == NULL){
-      return NULL;
+    return tree ->root;
 }
-//if(strcmp(key,tree->current))
-  /*if(tree == NULL){
+
+return NULL;
+
+
+
+/*if(tree == NULL){
+      return NULL;
+}*/
+/*if(strcmp(key,tree->current))
+  if(tree == NULL){
       return NULL;
   }else if (tree -> current < key){
       return searchTreeMap(aux->right,key);
@@ -113,9 +122,9 @@ if(tree == NULL){
       return  searchTreeMap(aux -> left,key);
   }else{
      return NULL;
-  }*/
+  }
 
-    return NULL;
+    return NULL;*/
 }
 
 
