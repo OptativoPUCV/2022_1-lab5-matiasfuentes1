@@ -272,3 +272,8 @@ treemap.c:103:5: error: 'aux' is used uninitialized in this function [-Werror=un
 cc1.exe: all warnings being treated as errors
 Compilation failed
 2db8363
+ju., 21 de abr. de 2022 17:49:53: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+3564f48
