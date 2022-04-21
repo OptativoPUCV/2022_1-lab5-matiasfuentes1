@@ -99,11 +99,13 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
   
- //TreeNode * aux = createTreeNode(key,NULL);
-tree -> current = tree ->root;
-if(tree-> root == key){
+TreeNode * aux = createTreeNode(key,NULL);
+aux -> pair->key = tree ->root;
 
-    return tree;
+//tree -> current = tree ->root;
+if(aux -> pair -> key == key){
+
+    return aux -> pair;
 }
 
 return NULL;
