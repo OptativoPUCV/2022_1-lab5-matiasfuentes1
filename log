@@ -254,3 +254,10 @@ treemap.c:102:17: error: expected expression before '=' token
                  ^
 Compilation failed
 eff8b7b
+ju., 21 de abr. de 2022 17:39:59: 
+ treemap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file a.out: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Compilation failed
+196d1de
