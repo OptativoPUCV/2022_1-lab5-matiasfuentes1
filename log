@@ -201,3 +201,14 @@ treemap.c:103:22: error: 'aux' is used uninitialized in this function [-Werror=u
 cc1.exe: all warnings being treated as errors
 Compilation failed
 143acf0
+ju., 21 de abr. de 2022 17:30:03: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+test.c: In function 'searchTreeMap':
+treemap.c:106:8: error: 'aux' is used uninitialized in this function [-Werror=uninitialized]
+ if(aux -> pair -> key == key){
+    ~~~~^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+78b73ae
