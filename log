@@ -307,3 +307,9 @@ treemap.c:143:1: error: control reaches end of non-void function [-Werror=return
 cc1.exe: all warnings being treated as errors
 Compilation failed
 86211e4
+sá., 23 de abr. de 2022 15:05:43: 
+ treemap.c | 98 ++++++++++++++++++++++++++++++++-------------------------------
+ 1 file changed, 50 insertions(+), 48 deletions(-)
+ tests:  15|4
+total_score: 25/70
+78994fb
