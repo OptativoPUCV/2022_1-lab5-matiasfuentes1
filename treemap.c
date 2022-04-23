@@ -23,7 +23,7 @@ int is_equal(TreeMap* tree, void* key1, void* key2){
     if(tree->lower_than(key1,key2)==0 &&  
         tree->lower_than(key2,key1)==0) return 1;
     else return 0;
-}
+}//ok
 
 TreeNode * createTreeNode(void* key, void * value) {
     TreeNode * new = (TreeNode *)malloc(sizeof(TreeNode));
@@ -247,16 +247,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 return NULL; 
 }//ok
 
-
 Pair * upperBound(TreeMap * tree, void* key) {
 
   TreeNode * aux = tree->root;
   TreeNode * nuevo = aux;
+  
   while(aux != NULL){
     if(tree->lower_than(aux->pair->key,key)==1){
       if(tree->lower_than(nuevo->pair->key,aux->pair->key)==1){
         nuevo = aux;
-        
       }else{
         nuevo = aux;
         aux = aux->right;
@@ -285,5 +284,26 @@ Pair * firstTreeMap(TreeMap * tree) {
 }//ok
 
 Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+  TreeNode * aux = tree->current;
+  if(aux->right!=NULL){
+    aux = aux -> right;
+    tree->current =aux;
+    while(aux -> left!=NULL){
+     aux = aux -> left;
+    }
+    return aux->pair;
+  }else{
+    if(aux->right == NULL){
+      while(aux->parent!=NULL){
+        if(tree->lower_than(tree->current->pair->key,aux->parent->pair->key)==0){
+          tree->current = aux;
+          return aux->parent->pair;
+        }else{
+          aux = aux->parent;
+        }
+      }
+    }
+  }
+  
+  return NULL;
 }
