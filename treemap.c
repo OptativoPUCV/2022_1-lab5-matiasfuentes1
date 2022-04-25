@@ -292,13 +292,19 @@ Pair * nextTreeMap(TreeMap * tree) {
     tree->current = minimum(tree->current->right);
     return tree->current->pair;
   }else{
-    if(tree->current->parent != NULL){
+   
       while (tree->current == tree->current->parent->right){
-        tree->current = tree->current->parent;
-        tree->current->parent = tree->current->parent->parent;
+         if(tree->current->parent != NULL){
+           tree->current->parent = tree->current->parent->parent;
+          }
       }
-      return tree->current->pair;
-    }
+      tree->current = tree->current->parent;
+      if (tree->current->parent==NULL){
+        return NULL;
+      }else{
+        return tree->current->pair;
+      }
+      
   }
   /*TreeNode * aux = tree->current;
   if(aux->right!=NULL){
