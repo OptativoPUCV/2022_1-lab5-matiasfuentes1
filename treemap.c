@@ -294,10 +294,10 @@ Pair * nextTreeMap(TreeMap * tree) {
   }else{
       
       while (tree->current->parent != NULL && tree->current == tree->current->parent->right){
-         //if(tree->current->parent != NULL){
+         
            tree->current->parent = tree->current->parent->parent;
-          }
-      //}
+      }
+      
       tree->current = tree->current->parent;
       if (tree->current==NULL){
         return NULL;
@@ -305,26 +305,6 @@ Pair * nextTreeMap(TreeMap * tree) {
         return tree->current->pair;
       }
   }
-  /*TreeNode * aux = tree->current;
-  if(aux->right!=NULL){
-    aux = aux -> right;
-    tree->current =aux;
-    while(aux -> left!=NULL){
-     aux = aux -> left;
-    }
-    return aux->pair;
-  }else{
-    if(aux->right == NULL){
-      while(aux->parent!=NULL){
-        if(tree->lower_than(tree->current->pair->key,aux->parent->pair->key)==0){
-          tree->current = aux;
-          return aux->parent->pair;
-        }else{
-          aux = aux->parent;
-        }
-      }
-    }
-  }*/
   
  return NULL;
 }
