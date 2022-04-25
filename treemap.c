@@ -289,7 +289,7 @@ Pair * nextTreeMap(TreeMap * tree) {
    return NULL;
   }
   if(tree->current->right!=NULL){
-    tree->current = minimum(tree->current->right);
+    tree-> current = minimum(tree->current->right);
     return tree->current->pair;
   }else{
       
@@ -299,7 +299,7 @@ Pair * nextTreeMap(TreeMap * tree) {
           }
       //}
       tree->current = tree->current->parent;
-      if (tree->current->parent==NULL){
+      if (tree->current==NULL){
         return NULL;
       }else{
         return tree->current->pair;
@@ -326,5 +326,5 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
   }*/
   
- //return NULL;
+ return NULL;
 }
